@@ -90,7 +90,7 @@ def run_prune(config):
     1024, 
     2048]
 
-    prune.simple_prune_net(config, simple_prune_layers, simple_prune_channels, simple_prune_affected_layers) # 如果将字典和列表变量传入函数，在函数内部修改字典和列表变量的值，从函数出来后变量会被更改。
+    prune.simple_prune_net(config, simple_prune_layers, simple_prune_channels, simple_prune_affected_layers) 
     prune.group_prune_net(config, group_prune_layers, group_prune_channels, groups=32)
     prune.resnet_prune_net(config, resnet_prune_layers, resnet_prune_channels)    
     
