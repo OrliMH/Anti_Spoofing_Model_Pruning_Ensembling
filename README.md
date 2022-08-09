@@ -29,7 +29,7 @@ Currently only single mode model pruning is supported.
 `python re_train_model_A_color_32.py `
 4. Compare metrics and FLOPS:  
 `python metric_compare.py `  
-`python compare_flops.py `
+`python compare_flops.py `  
 Here is the result of metrics before and after pruning for model A color 32:
 +------------+----------+----------+  
 | Metric     | Before   | After    |  
