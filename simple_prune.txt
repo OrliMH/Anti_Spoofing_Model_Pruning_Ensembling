@@ -1,0 +1,21 @@
+
+module.encoder.layer0.conv1.weight
+len(steps):7
+i:0
+
+module.encoder.layer0.conv1.weight
+len(steps):7
+i:0
+pruned 8 channels 0.125, acc: 0.9658617818484596
+i:1
+pruned 16 channels 0.25, acc: 0.9658617818484596
+i:2
+pruned 24 channels 0.375, acc: 0.9658617818484596
+i:3
+pruned 32 channels 0.5, acc: 0.9658617818484596
+i:4
+pruned 40 channels 0.625, acc: 0.9620108243130724
+i:5
+pruned 48 channels 0.75, acc: 0.8771856786011657
+i:6
+pruned 57 channels 0.890625, acc: 0.6883846794338052

@@ -1,0 +1,41 @@
+
+layer: module.encoder.layer1.0.downsample.0.weight, channel: 256
+prune 25 channels 10%, acc: 0.9652373022481265
+prune 51 channels 20%, acc: 0.9679433805162365
+prune 76 channels 30%, acc: 0.9658617818484596
+prune 102 channels 40%, acc: 0.9633638634471274
+prune 128 channels 50%, acc: 0.9560782681099084
+prune 153 channels 60%, acc: 0.9575353871773522
+prune 179 channels 70%, acc: 0.9448376353039134
+prune 204 channels 80%, acc: 0.8484596169858452
+prune 230 channels 90%, acc: 0.7051415487094088
+layer: module.encoder.layer2.0.downsample.0.weight, channel: 512
+prune 51 channels 10%, acc: 0.9632597835137385
+prune 102 channels 20%, acc: 0.9612822647793505
+prune 153 channels 30%, acc: 0.9575353871773522
+prune 204 channels 40%, acc: 0.9294338051623647
+prune 256 channels 50%, acc: 0.9159034138218152
+prune 307 channels 60%, acc: 0.9537885095753539
+prune 358 channels 70%, acc: 0.9417152373022482
+prune 409 channels 80%, acc: 0.9133014154870941
+prune 460 channels 90%, acc: 0.8161948376353039
+layer: module.encoder.layer3.0.downsample.0.weight, channel: 1024
+prune 102 channels 10%, acc: 0.9658617818484596
+prune 204 channels 20%, acc: 0.9658617818484596
+prune 307 channels 30%, acc: 0.9659658617818485
+prune 409 channels 40%, acc: 0.9660699417152373
+prune 512 channels 50%, acc: 0.9659658617818485
+prune 614 channels 60%, acc: 0.966278101582015
+prune 716 channels 70%, acc: 0.9663821815154038
+prune 819 channels 80%, acc: 0.9619067443796836
+prune 921 channels 90%, acc: 0.4751248959200666
+layer: module.encoder.layer4.0.downsample.0.weight, channel: 2048
+prune 204 channels 10%, acc: 0.9658617818484596
+prune 409 channels 20%, acc: 0.9658617818484596
+prune 614 channels 30%, acc: 0.9658617818484596
+prune 819 channels 40%, acc: 0.9658617818484596
+prune 1024 channels 50%, acc: 0.9658617818484596
+prune 1228 channels 60%, acc: 0.966278101582015
+prune 1433 channels 70%, acc: 0.9671107410491258
+prune 1638 channels 80%, acc: 0.9677352206494588
+prune 1843 channels 90%, acc: 0.9676311407160699
