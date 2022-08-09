@@ -43,7 +43,7 @@ Here is the result of metrics before and after pruning for model A color 32:
 +------------+----------+----------+  
 
 ### Ensemble
-`python ensemble.py`
+`python ensemble.py`  
              loss            acer           acc               correct  
 ensemble      0.009825291112065315 0.001360749924402782 0.9981265611990008 0.9981265611990008  
 single        0.007655922789126635 0.0011339582703356517 0.9984388009991674 0.9984388009991674  
