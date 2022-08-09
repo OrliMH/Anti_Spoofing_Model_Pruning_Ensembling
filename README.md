@@ -4,22 +4,22 @@ I add the pruning part for color mode model.
 The pruning part code originates from my gitee repo https://gitee.com/OrliMH/living-body-detection-and-face-recognition-under-occlusion    
 
 
-### data set  
+### Dataset  
 name:CASIA-SURF    
 intro:https://openaccess.thecvf.com/content_CVPR_2019/papers/Zhang_A_Dataset_and_Benchmark_for_Large-Scale_Multi-Modal_Face_Anti-Spoofing_CVPR_2019_paper.pdf  
 The dataset link is supported in the above intro paper.
 
-### alter data path  
+### Alter data path  
 After downloading the dataset, data path should be altered to the location you data downloaded to.  
 Data paths variables are in the file process/data_helper.py.
 
-### model training  
+### Model training  
 sigle mode:  
 `python train_CyclicLR.py ` 
 fusion mode:
 `python train_Fusion_CyclicLR.py `  
 
-### model pruning
+### Model pruning
 Currently only single mode model pruning is supported.  
 1. To get results of pruning different conv layers with different pruning rates:  
 `python prune_filters.py `  
@@ -41,6 +41,13 @@ Here is the result of metrics before and after pruning for model A color 32:
 | Parameters | 17409084 | 3031974  |  
 | Inference  | 0.0280   | 0.0141   |  
 +------------+----------+----------+  
+
+### Ensemble
+`python ensemble.py`
+             loss            acer           acc               correct  
+ensemble      0.009825291112065315 0.001360749924402782 0.9981265611990008 0.9981265611990008  
+single        0.007655922789126635 0.0011339582703356517 0.9984388009991674 0.9984388009991674  
+
 
 
 
