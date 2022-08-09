@@ -22,7 +22,6 @@ import torch
 import prune
 
 
-# 获取不同的模型
 def get_model(model_name, num_class,is_first_bn):
     if model_name == 'baseline':
         from model.model_baseline import Net
@@ -66,8 +65,8 @@ def get_net_weight(config):
     return model 
 
 def run_prune(config):
-    simple_prune_layers = ['module.encoder.layer0.conv1.weight'] # 同步prune bn1.weight(i+1)，bn1.bias(i+2)，决定紧接着的conv(i+3)的inchannel，
-    #决定module.encoder.layer1.0.downsample.0.weight(i+16)的inchannel
+    simple_prune_layers = ['module.encoder.layer0.conv1.weight'] # prune bn1.weight(i+1), bn1.bias(i+2) affect inchannel of conv(i+3)
+    # inchannel of  module.encoder.layer1.0.downsample.0.weight(i+16)
     simple_prune_channels = [64]
 
     simple_prune_affected_layers = ['module.encoder.layer1.0.conv1.weight', 'module.encoder.layer1.0.downsample.0.weight']
@@ -79,8 +78,8 @@ def run_prune(config):
     'module.encoder.layer3.1.conv2.weight',
     'module.encoder.layer4.0.conv2.weight',
     'module.encoder.layer4.1.conv2.weight'
-    ] # 当前conv是组卷积，将inchannel分成group组，那么只对outchannel进行prune，prune后outchannel是32倍数(group参数是32)，不对inchannel进行prune，因为inchannel分组后参数是4，8，16,32，参数量少，而且如果inchannel和outchannel同时prune，参数量容易算重复，不好统计，代码也不好实现
-    group_prune_channels = [128, 128, 256, 256, 512, 512, 1024, 1024] # 是组卷积的outchannel
+    ] 
+    group_prune_channels = [128, 128, 256, 256, 512, 512, 1024, 1024] # outchannel of group conv
     resnet_prune_layers = [ 'module.encoder.layer1.0.downsample.0.weight', 
     'module.encoder.layer2.0.downsample.0.weight',
     'module.encoder.layer3.0.downsample.0.weight', 
