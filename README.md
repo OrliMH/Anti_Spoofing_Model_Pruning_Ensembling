@@ -15,10 +15,10 @@ Data paths variables are in the file process/data_helper.py.
 
 ### Model training  
 sigle mode:  
-`python train_CyclicLR.py ` 
+`python train_CyclicLR.py `   
 fusion mode:
 `python train_Fusion_CyclicLR.py `  
-&emsp; &ensp;&ensp;&ensp;&ensp;acer
+&emsp; &ensp;&ensp;&ensp;&ensp;acer  
 baseline_color_32    &emsp;       0.0491917713059422  
 Model_A_color_32     &emsp;       0.033844829059388806  
 &emsp;
