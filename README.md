@@ -18,6 +18,16 @@ sigle mode:
 `python train_CyclicLR.py ` 
 fusion mode:
 `python train_Fusion_CyclicLR.py `  
+&emsp; &ensp;&ensp;&ensp;&ensp;acer
+baseline_color_32    &emsp;       0.0491917713059422  
+Model_A_color_32     &emsp;       0.033844829059388806  
+&emsp;
+baseline_color_64    &emsp;       0.1065163791952416  
+model_A_color_64     &emsp;       0.06830342471052375  
+&emsp;
+baseline_no_SE_fusion_32 &emsp;   0.0003779860901118839  
+baseline_fusion_32     &emsp;     0.00007559721802237678(7.559721802237678e-05)  
+model_A_fusion_32      &emsp;     0.0006047777441790142  
 
 ### Model pruning
 Currently only single mode model pruning is supported.  
@@ -30,7 +40,8 @@ Currently only single mode model pruning is supported.
 4. Compare metrics and FLOPS:  
 `python metric_compare.py `  
 `python compare_flops.py `  
-Here is the result of metrics before and after pruning for model A color 32:  
+
+Below is the result of metrics before and after pruning for model A color 32:  
 +------------+----------+----------+  
 | Metric     | Before   | After    |  
 +------------+----------+----------+  
@@ -41,6 +52,20 @@ Here is the result of metrics before and after pruning for model A color 32:
 | Parameters | 17409084 | 3031974  |  
 | Inference  | 0.0280   | 0.0141   |  
 +------------+----------+----------+  
+Bellow is the metrics and FLOPs before and after pruning for model A color 64 with different pruning rates and layers comparing model A color 32:  
++------------+----------+----------+  
+| Metric     | Before   | After    |  
++------------+----------+----------+  
+| loss       | 0.175365 | 0.207033 |  
+| acer       | 0.040642 | 0.061712 |  
+| acc        | 0.949833 | 0.927873 |  
+| correct    | 0.950452 | 0.928762 |  
+| Parameters | 17409084 | 3169363  |  
+| Inference  | 0.0106   | 0.0115   |  
++------------+----------+----------+  
+FLOPS:  
+before:  207,262,624 FLOPs or approx. 0.21 GFLOPs  
+after:    105,704,104 FLOPs or approx. 0.11 GFLOPs   
 
 ### Ensemble
 `python ensemble.py`  
