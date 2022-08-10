@@ -67,7 +67,7 @@ after:    105,704,104 FLOPs or approx. 0.11 GFLOPs
 
 ### Ensemble
 `python ensemble.py`  
-&emsp; &ensp;&ensp;&ensp;&ensp;loss     &emsp;       acer     &emsp;      acc     &emsp;          correct  
+&emsp; &ensp;&ensp;&ensp;&ensp;&emsp; &ensp;&ensp;&ensp;&ensp;loss    &emsp;    acer     &emsp;    acc   &emsp;   correct    
 ensemble  &ensp;    0.009825291112065315&ensp; 0.001360749924402782 &ensp;0.9981265611990008&ensp; 0.9981265611990008  
 single   &ensp;     0.007655922789126635&ensp; 0.0011339582703356517 &ensp;0.9984388009991674&ensp; 0.9984388009991674  
 
