@@ -61,7 +61,7 @@ Bellow is the metrics and FLOPs before and after pruning for model A color 64 wi
 | Parameters | 17409084 | 3169363  |  
 | Inference  | 0.0106   | 0.0115   |  
 +------------+----------+----------+  
-FLOPS:  
+FLOPs:  
 before:  207,262,624 FLOPs or approx. 0.21 GFLOPs  
 after:    105,704,104 FLOPs or approx. 0.11 GFLOPs   
 
