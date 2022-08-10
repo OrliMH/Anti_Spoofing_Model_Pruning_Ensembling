@@ -18,7 +18,7 @@ sigle mode:
 `python train_CyclicLR.py `   
 fusion mode:  
 `python train_Fusion_CyclicLR.py `  
-&emsp; &ensp;&ensp;&ensp;&ensp;&emsp; &ensp;&ensp;&ensp;&ensp;acer  
+&emsp; &ensp;&ensp;&ensp;&ensp;&emsp; &ensp;&ensp;&ensp;&ensp;&emsp; &ensp;&ensp;&ensp;&ensp;&emsp; &ensp;&ensp;&ensp;acer  
 baseline_color_32    &emsp;       0.0491917713059422  
 Model_A_color_32     &emsp;       0.033844829059388806  
 baseline_color_64    &emsp;       0.1065163791952416  
